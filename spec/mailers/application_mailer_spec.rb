@@ -90,7 +90,7 @@ describe ApplicationMailer do
         create_multipart_method('multipart_theme_only')
         @mail = ApplicationMailer.multipart_theme_only
         expect(@mail.parts.size).to eq(2)
-        message_part = @mail.parts[0].to_s
+        message_part = @mail.parts[1].to_s
         expect(message_part).to match("Theme multipart")
       end
 
@@ -99,7 +99,7 @@ describe ApplicationMailer do
         create_multipart_method('multipart_core_only')
         @mail = ApplicationMailer.multipart_core_only
         expect(@mail.parts.size).to eq(2)
-        message_part = @mail.parts[0].to_s
+        message_part = @mail.parts[1].to_s
         expect(message_part).to match("Core multipart")
       end
 
@@ -137,7 +137,7 @@ describe ApplicationMailer do
         create_multipart_method('multipart_core_only')
         @mail = ApplicationMailer.multipart_core_only
         expect(@mail.parts.size).to eq(2)
-        message_part = @mail.parts[0].to_s
+        message_part = @mail.parts[1].to_s
         expect(message_part).to match("Core multipart")
       end
 
@@ -146,7 +146,7 @@ describe ApplicationMailer do
         create_multipart_method('multipart_theme_only')
         @mail = ApplicationMailer.multipart_theme_only
         expect(@mail.parts.size).to eq(2)
-        message_part = @mail.parts[0].to_s
+        message_part = @mail.parts[1].to_s
         expect(message_part).to match("Theme multipart")
       end
 
